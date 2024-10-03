@@ -1,0 +1,22 @@
+{
+   "action": {
+      "default_icon": {
+         "16": "SQRicon.png"
+      },
+      "default_popup": "options.html",
+      "default_title": "Salesforce Queue Refresher"
+   },
+   "content_scripts": [ {
+      "js": [ "gridRefresh.js" ],
+      "matches": [ "*://*.lightning.force.com/*", "https://api.ipify.org/*" ],
+      "run_at": "document_idle"
+   } ],
+   "icons": {
+      "16": "SQRicon.png"
+   },
+   "manifest_version": 3,
+   "name": "Salesforce Queue Refresher - Expereo CSC - By: Jerewix",
+   "permissions": [ "storage", "notifications"],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "3.5"
+}

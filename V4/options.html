@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+
+    <head>
+        <style>
+            html {
+                min-height: 5em;
+                min-width: 12em;
+                background: salmon;
+                background-image: linear-gradient(to bottom right, rgb(0, 0, 0),rgb(0, 0, 0), rgb(0, 0, 0));
+                border-radius: 12px;
+            }
+            label{
+                color: whitesmoke;
+            }
+
+            .button {
+                background-color: white;
+                color: black;
+                border: 2px solid #008CBA;
+                /* Green */
+                transition-duration: 0.4s;
+                border-radius: 12px;
+                margin: 5px;
+                ;
+            }
+
+            .button:hover {
+                background-color: #008CBA;
+                /* Green */
+                color: white;
+            }
+        </style>
+    </head>
+</head>
+
+<body>
+    <label>Refresh Interval:</label>
+    <select id="ddlDuration">
+        <option value="5">5 Sec</option>
+        <option value="15">15 Sec</option>
+        <option value="30">30 Sec</option>
+        <option value="45">45 Sec</option>
+        <option value="60">1 Min</option>
+        <option value="90">1.5 Min</option>
+        <option value="120">2 Min</option>
+        <option value="300">5 Min</option>
+        <option value="600">10 Min</option>
+        <option value="900">15 Min</option>
+    </select>
+    <br />
+    <label>
+        PAUSE Refresh: <input type="checkbox" id="chkbxPause">
+    </label>
+    <br />
+    <label>
+        Service Desk Notification: <input type="checkbox" id="chkbxNSD">
+    </label>
+    <br />
+    <label>
+        Connect Notification: <input type="checkbox" id="chkbxNCM">
+    </label>
+    <!-- <br />
+    <label>
+        SDWAN Notification: <input type="checkbox" id="chkbxNSDWAN"> -->
+    </label>
+    <div id="status" style="color: crimson;"></div>
+    <button id="btnSave" class="button">Save</button>
+
+    <script src="options.js"></script>
+</body>
+
+</html>
